@@ -34,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = findViewById(R.id.sample_text);
 //        tv.setText(printAudioInfo());
         tv.setOnClickListener(v -> {
-//            startActivity(new Intent(MainActivity.this, Ffmpeg_MainActivity.class));
-            startActivity(new Intent(MainActivity.this, SocketActivity.class));
+            startActivity(new Intent(MainActivity.this, Ffmpeg_MainActivity.class));
+//            startActivity(new Intent(MainActivity.this, SocketActivity.class));
 
         });
         requestPermission();
     }
 
-    //申请录像权限
+    //申请权限
     private void requestPermission(){
         permissionsManager.requestVideoPermission(MainActivity.this);
     }
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     for (int result : grantResults) {
                         if (result != PackageManager.PERMISSION_GRANTED) {
                             showDialog();
-                            Toast.makeText(MainActivity.this, "录像权限被拒绝",Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "权限被拒绝",Toast.LENGTH_LONG).show();
                             break;
                         }
                     }
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     //弹出提示框
     private void showDialog(){
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setMessage("播放视频需要读写权限，是否去设置？")
+                .setMessage("需要读写权限，是否去设置？")
                 .setPositiveButton("是", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
