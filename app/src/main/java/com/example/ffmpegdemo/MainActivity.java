@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
 //        tv.setText(printAudioInfo());
         tv.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, Ffmpeg_MainActivity.class));
-//            startActivity(new Intent(MainActivity.this, SocketActivity.class));
-
         });
         requestPermission();
     }

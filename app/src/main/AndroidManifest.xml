@@ -29,7 +29,6 @@
         <activity android:name=".FfmpegActivity"/>
         <activity android:name=".ffmpeg.ui.Ffmpeg_MainActivity"/>
         <activity android:name=".ffmpeg.ui.FFmpegCommandActivity"/>
-        <activity android:name=".SocketActivity"/>
     </application>
 
 </manifest>
